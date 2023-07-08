@@ -29,8 +29,8 @@ export default function Home({pageInfo, socials, experiences, skills, projects} 
 
   return (
     <div id='main' onScroll={(e) => {
-      const homeBtn : HTMLElement | null = document.getElementById("home-btn");
-      const main : Element | null = document.querySelector("#main");
+      const homeBtn : HTMLElement = document.getElementById("home-btn")!;
+      const main : Element = document.querySelector("#main")!;
       if(main.scrollTop > 300){
         homeBtn.style.display = "block";
       }else{
@@ -38,7 +38,7 @@ export default function Home({pageInfo, socials, experiences, skills, projects} 
       }
     }} className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scroll-smooth scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 overflow-x-hidden'>
       <Head>
-        <title>Create Next App</title>
+        <title>Mert Ali Usanmaz | Portfolyo</title>
       </Head>
       <Header socials={socials} />
       <section id="hero" className='snap-start'>
