@@ -20,7 +20,7 @@ const Projects = ({experiences}: Props) => {
                 experiences?.map((item,i) => (
                     <div key={item._id} className='w-screen flex-shrink-0 snap-center flex flex-col items-center justify-center gap-10 px-10 h-screen'>
                         <motion.img
-                        initial={{y:-300}} transition={{duration:0.75}} whileInView={{opacity:1, y: 0}} viewport={{once:true}} src={item.image ? urlFor(item.image).url() : 'https://burgessforensics.com/wp-content/uploads/2016/10/ManyMobileDevices.jpg'} className='w-64 md:w-[30rem]' alt="" />
+                        initial={{y:-200}} transition={{duration:0.75}} whileInView={{opacity:1, y: 0}} viewport={{once:true}} src={item.image ? urlFor(item.image).url() : 'https://burgessforensics.com/wp-content/uploads/2016/10/ManyMobileDevices.jpg'} className='w-64 md:w-[30rem]' alt="" />
                         <div className='flex space-x-2 -mb-6'>{
                             item.technologies.map(tech => (
                                 <img key={tech._id} className='h-5 w-5 md:h-10 md:w-10 rounded-full' src={urlFor(tech.image).url()} alt=''/>

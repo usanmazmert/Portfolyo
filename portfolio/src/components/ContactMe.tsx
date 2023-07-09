@@ -22,11 +22,11 @@ const ContactMe = ({pageInfo}: Props)=> {
 
     const onSubmit: SubmitHandler<Inputs> = (data) => window.location.href = `mailto:usanmazmert.info@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message} (${data.email})`;
   return (
-    <div className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
+    <div className='h-screen w-screen flex relative flex-col text-center md:text-left md:flex-row justify-evenly mx-auto items-center'>
         <h3 className='snap-title'>
         Contact
         </h3>
-        <div className='relative flex top-10 flex-col space-y-10'>
+        <div className='relative flex top-10 flex-col space-y-10 px-40'>
             <h4 className='text-lg md:text-xl lg:text-3xl font-semibold text-center'>
                 I have got just what you need.{" "}<span className='decoration-[#F7AB0A]/50 underline'>Lets Talk.</span>
             </h4>
@@ -49,8 +49,8 @@ const ContactMe = ({pageInfo}: Props)=> {
                     <p className='contact-title'>{pageInfo.address}</p>
                 </div>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='w-fit flex flex-col space-y-2 mx-auto'>
-                <div className='flex space-x-2'>
+            <form onSubmit={handleSubmit(onSubmit)} className='w-screen sm:w-fit px-20 flex flex-col space-y-2 mx-auto'>
+                <div className='flex flex-col items-center md:flex-row gap-2'>
                     <input {...register("name")} className='contactInput' type="text" placeholder='Name'/>
                     <input {...register("email")} className='contactInput' type="text" placeholder='Email'/>
                 </div>
