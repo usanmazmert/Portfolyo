@@ -71,7 +71,7 @@ export default function Home({pageInfo, socials, experiences, skills, projects} 
 }
 
 
-export const getServerSideProps : GetServerSideProps<Props> = async () => {
+export const getStaticProps : GetStaticProps<Props> = async () => {
 
   const pageInfo = await fetchPageInfo();
   const experiences = await fetchExperinces();
@@ -86,6 +86,7 @@ export const getServerSideProps : GetServerSideProps<Props> = async () => {
       socials,
       projects,
       skills
-    }
+    },
+    revalidate: 10
   }
 }
