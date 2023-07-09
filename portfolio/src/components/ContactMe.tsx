@@ -26,7 +26,7 @@ const ContactMe = ({pageInfo}: Props)=> {
         <h3 className='snap-title'>
         Contact
         </h3>
-        <div className='relative flex top-10 flex-col space-y-10 px-40'>
+        <div className='relative flex top-10 flex-col space-y-4 px-20'>
             <h4 className='text-lg md:text-xl lg:text-3xl font-semibold text-center'>
                 I have got just what you need.{" "}<span className='decoration-[#F7AB0A]/50 underline'>Lets Talk.</span>
             </h4>

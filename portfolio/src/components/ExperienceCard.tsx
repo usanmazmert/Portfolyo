@@ -19,7 +19,7 @@ const ExperienceCard = ({project}: Props) => {
             transition={{duration:1.2}}
             whileInView={{opacity:1, y: 0}}
             viewport={{once:true}}
-            className="h-24 w-24 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
+            className="h-24 w-24 rounded-full object-cover object-center"
             src={urlFor(project.companyImage).url()}
             alt=''
             />
@@ -30,9 +30,9 @@ const ExperienceCard = ({project}: Props) => {
                     project.company && (
                         <div>
                             <h4 className='text-2xl font-light'>
-                                CEO OF APES
+                                {/* Role in company */}
                             </h4>
-                            <p className='font-bold text-lg mt-1'>PAPAFAM</p>
+                            <p className='font-bold text-lg mt-1'>{/** Company Name */}</p>
                         </div>
                     )
                 }
@@ -46,7 +46,7 @@ const ExperienceCard = ({project}: Props) => {
                         Started work... - Ended...
                     </p>)
                 }
-                <ul className='list-disc space-y-4 mt-10 ml-5 text-lg'>
+                <ul className='list-disc space-y-2 md:space-y-4 mt-10 ml-5 text-sm md:text-base lg:text-lg'>
                     {project.points.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
