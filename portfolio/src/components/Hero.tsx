@@ -29,10 +29,10 @@ export default function Hero({pageInfo}: Props) {
       <BackgroundCircles />
       <img src={urlFor(pageInfo?.heroImage).url()} alt="" className='relative rounded-full h-32 w-32 mx-auto object-cover'/>
       <div className='z-20'>
-        <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+        <h2 className='text-xs md:text-sm uppercase text-gray-500 pb-2 tracking-[5px] md:tracking-[10px]'>
           {pageInfo?.role}
         </h2>
-        <h1 className='text-5xl lg:text-6xl font-semibold scroll-px-10'>
+        <h1 className='text-xl md:text-4xl font-semibold scroll-px-10'>
           <span>{text}</span><Cursor cursorColor='#F7AB0A' />
         </h1>
         <div className='pt-5'>

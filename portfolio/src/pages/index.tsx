@@ -10,7 +10,7 @@ import ContactMe from '@/components/ContactMe'
 import Link from 'next/link'
 import {AiOutlineArrowUp} from "react-icons/ai"
 import { fetchExperinces, fetchPageInfo, fetchProjects, fetchSkills, fetchSocials } from '@/utils/fetchApi'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import { Experience, PageInfo, Project, Skill, Social } from '@/typings'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -71,7 +71,7 @@ export default function Home({pageInfo, socials, experiences, skills, projects} 
 }
 
 
-export const getStaticProps : GetStaticProps<Props> = async () => {
+export const getServerSideProps : GetServerSideProps<Props> = async () => {
 
   const pageInfo = await fetchPageInfo();
   const experiences = await fetchExperinces();
@@ -86,8 +86,6 @@ export const getStaticProps : GetStaticProps<Props> = async () => {
       socials,
       projects,
       skills
-    },
-
-    revalidate: 10
+    }
   }
 }

@@ -10,9 +10,10 @@ type Props = {
 
 const ExperienceCard = ({project}: Props) => {
 
+
   return (
     <Link href={project.linkToBuild}>
-        <article className='relative flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 h-[550px] overflow-hidden cursor-pointer hover:opacity-100 opacity-40 transition-opacity top-20'>
+        <article className='relative flex flex-col rounded-1 items-center space-y-7 flex-shrink-0 w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 h-[550px] overflow-hidden cursor-pointer hover:opacity-100 opacity-40 transition-opacity top-20'>
             <motion.img
             initial={{y:-100, opacity:0}}
             transition={{duration:1.2}}
@@ -24,6 +25,7 @@ const ExperienceCard = ({project}: Props) => {
             />
             <div className='px-0 md:px-10'>
 
+                <h4 className='underscore decoration-scrollbar-yellow'>{project.jobTitle}</h4>
                 {
                     project.company && (
                         <div>
@@ -34,25 +36,17 @@ const ExperienceCard = ({project}: Props) => {
                         </div>
                     )
                 }
-
-                {
-                    /**
-                    * Collobrators part for Experiences
-                    * 
-                        <div className='flex space-x-2 my-2'>
-                            <img className='h-10 w-10 rounded-full' src='https://avatars.githubusercontent.com/u/107780733?s=400&u=d8412091a36d5dde7e703f69917b1e643db63875&v=4' alt=''/>
-                            <img className='h-10 w-10 rounded-full' src='https://avatars.githubusercontent.com/u/107780733?s=400&u=d8412091a36d5dde7e703f69917b1e643db63875&v=4' alt=''/>
-                            <img className='h-10 w-10 rounded-full' src='https://avatars.githubusercontent.com/u/107780733?s=400&u=d8412091a36d5dde7e703f69917b1e643db63875&v=4' alt=''/>
-                        </div>
-                    * 
-                    */
-                }
+                <div className='flex space-x-2 mt-4'>
+                    {project.technologies.map(item => (
+                        <img key={item._id} className='h-10 w-10 rounded-full' src={urlFor(item.image).url()} alt=''/>
+                    ))}
+                </div>
                 {
                     project.dateStarted && (<p className='uppercase py-5 text-gray-300'>
                         Started work... - Ended...
                     </p>)
                 }
-                <ul className='list-disc space-y-4 mt-20 ml-5 text-lg'>
+                <ul className='list-disc space-y-4 mt-10 ml-5 text-lg'>
                     {project.points.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
