@@ -19,7 +19,7 @@ const Skills = (props: Props) => {
         <h3 className='snap-title'>Skills</h3>
         <h3 className='absolute top-28 uppercase px-4 tracking-[3px] text-gray-500 text-sm'>Hover over a skill for experience percentage</h3>
 
-        <div className=' grid grid-cols-2 md:grid-cols-4 gap-4 relative top-10'>
+        <div className=' grid grid-cols-2 md:grid-cols-4 gap-4 relative top-14'>
           {
             props?.skills?.map((item, index) => {
               if(index <= 7)
