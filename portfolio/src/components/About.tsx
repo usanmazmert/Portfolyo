@@ -20,9 +20,9 @@ function About({pageInfo}: Props) {
             whileInView={{opacity:1, x: 0}}
             viewport={{once:true}}
             src={urlFor(pageInfo?.profilePic).url()}
-            className='relative top-28 md:top-0 md:mb-0 flex-shrink-0 w-20 h-20 sm:w-40 sm:h-40 rounded-full object-cover md:rounded-lg md:w-48 md:h-80 xl:w-[250px] xl:h-[300px]'
+            className='relative top-20 md:top-0 md:mb-0 flex-shrink-0 w-20 h-20 sm:w-40 sm:h-40 rounded-full object-cover md:rounded-lg md:w-48 md:h-80 xl:w-[250px] xl:h-[300px]'
             />
-            <div className='space-y-10 px-0 md:px-10'>
+            <div className='space-y-10 -mt-16 px-0 md:px-10'>
                 <h4 className='text-lg sm:text-2xl font-semibold'>Here is a <span className="underline decoration-[#F7AB0A]">little</span> background</h4>
                 <p className='text-sm smd:text-base'>
                     {pageInfo.backgroundInformation}

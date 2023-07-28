@@ -26,6 +26,7 @@ export default function Hero({pageInfo}: Props) {
     } 
     whileInView={{opacity:1}}
     transition={{duration:1}} className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+      <a className='heroButton mb-8 z-20 ml-4' href='/Mert Ali Usanmaz 2023CV.pdf' download>Get The CV</a>
       <BackgroundCircles />
       <img src={urlFor(pageInfo?.heroImage).url()} alt="" className='relative rounded-full h-32 w-32 mx-auto object-cover'/>
       <div className='z-20'>

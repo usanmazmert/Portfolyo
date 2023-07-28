@@ -49,7 +49,7 @@ const ContactMe = ({pageInfo}: Props)=> {
                     <p className='contact-title'>{pageInfo.address}</p>
                 </div>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='w-screen sm:w-fit px-20 flex flex-col space-y-2 mx-auto'>
+            <form onSubmit={handleSubmit(onSubmit)} className='w-screen sm:w-fit px-10 flex flex-col space-y-2 mx-auto'>
                 <div className='flex flex-col items-center md:flex-row gap-2'>
                     <input {...register("name")} className='contactInput' type="text" placeholder='Name'/>
                     <input {...register("email")} className='contactInput' type="text" placeholder='Email'/>
